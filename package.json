@@ -1,0 +1,15 @@
+{
+  "name": "saas-rabbitmq-demo",
+  "version": "1.0.0",
+  "description": "Message queues demo, built for SaaS course NTUA",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Christos Hadjichristofi",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.10.3",
+    "dotenv": "^16.0.3"
+  }
+}
