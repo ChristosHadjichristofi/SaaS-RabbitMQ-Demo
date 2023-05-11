@@ -1,5 +1,5 @@
 # SaaS-RabbitMQ-Demo
-Message Queues demo, written for SaaS
+Message Queues demo (direct exchange - 2 producers - 2 consumers), written for SaaS
 
 ## Template for .env file
 ```
