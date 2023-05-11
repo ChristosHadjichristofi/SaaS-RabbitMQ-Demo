@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-const amqp = require('amqplib');
+require('dotenv').config({ path: '../.env' });
 
 async function consume_from_q_B() {
   try {

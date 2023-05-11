@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv').config({ path: '../.env' });
 
 const amqp = require('amqplib');
 
@@ -12,7 +12,7 @@ async function produce_to_q_B() {
 
     // Create the direct exchange
     const exchangeName = process.env.EXCHANGE_NAME;
-    await channel.assertExchange(exchangeName, 'direct', { durable: false });
+    await channel.assertExchange(exchangeName, 'direct', { durable: true });
 
     // Send messages to the chart_B
     const routingKey_q_B = process.env.ROUTING_KEY_Q_B;
