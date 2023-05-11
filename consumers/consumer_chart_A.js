@@ -12,11 +12,11 @@ async function consume_from_q_A() {
     
     // Create the direct exchange
     const exchangeName = process.env.EXCHANGE_NAME;
-    await channel.assertExchange(exchangeName, 'direct', { durable: false });
+    await channel.assertExchange(exchangeName, 'direct', { durable: true });
     
     // Create the chart_A queue
     const queueName = 'chart_A';
-    const assertQueue = await channel.assertQueue(queueName, { durable: false });
+    const assertQueue = await channel.assertQueue(queueName, { durable: true });
     
     // Bind the queue to the exchange with the routing key
     const routingKey_q_A = process.env.ROUTING_KEY_Q_A;
