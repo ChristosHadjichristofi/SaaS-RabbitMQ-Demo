@@ -8,4 +8,6 @@ RABBITMQ_URL="amqp://<username>:<password>@<host>"
 EXCHANGE_NAME="<exchange name>"
 ROUTING_KEY_Q_A="<routing key queue A>"
 ROUTING_KEY_Q_B="<routing key queue B>"
+QUEUE_A="<queue A name>"
+QUEUE_B="<queue B name>"
 ```
