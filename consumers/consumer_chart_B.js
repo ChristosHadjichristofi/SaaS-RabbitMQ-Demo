@@ -23,6 +23,7 @@ async function consume_from_q_B() {
     console.log(`Consumer started. Waiting for messages in queue ${queueName}...`);
     channel.consume(assertQueue.queue, (message) => {
       console.log(`Received message: ${message.content.toString()}`);
+      channel.ack(message);
     }, { noAck: false });
   } catch (error) {
     console.log(error);
