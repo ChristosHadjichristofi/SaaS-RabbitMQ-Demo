@@ -4,6 +4,7 @@ const amqp = require('amqplib');
 
 async function produce_to_q_A() {
   try {
+    // Connect to RabbitMQ server
     const connection = await amqp.connect(process.env.RABBITMQ_URL);
 
     // Create a channel
