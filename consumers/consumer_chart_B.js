@@ -15,7 +15,7 @@ async function consume_from_q_B() {
     await channel.assertExchange(exchangeName, 'direct', { durable: true });
 
     // Create the chart_B queue and bind it to the exchange
-    const queueName = 'chart_B';
+    const queueName = process.env.QUEUE_B;
     await channel.assertQueue(queueName, { durable: true });
     channel.bindQueue(queueName, exchangeName, process.env.ROUTING_KEY_Q_B);
 
